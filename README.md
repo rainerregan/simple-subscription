@@ -2,7 +2,7 @@
 This Laravel app will allow user to create blog posts with `title` and `content` using RESTful API, and subscribing to the mailing list, so people will get the newest info about the latest blog posts.
 
 ## How to implement
-1. Clone this repository
+1. Clone this repository. And navigate to the folder using `cd simple-subscription`
 2. Activate MYSQL on XAMPP and Create a new database using MySQL. For example:
     ```sql
     CREATE DATABASE simple_subscription;
