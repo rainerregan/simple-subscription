@@ -2,6 +2,7 @@
 This Laravel app will allow user to create blog posts with `title` and `content` using RESTful API, and subscribing to the mailing list, so people will get the newest info about the latest blog posts.
 
 Laravel version: 9
+
 PHP version:
 ```
 PHP 8.0.3 (cli) (built: Mar  2 2021 23:34:05) ( ZTS Visual C++ 2019 x64 )
@@ -9,7 +10,22 @@ Copyright (c) The PHP Group
 Zend Engine v4.0.3, Copyright (c) Zend Technologies
 ```
 
-## How to implement
+## API Endpoint
+All API endpoints are using /api prefix.
+
+### Blog Post Endpoints
+- Get all posts [GET]: `http://127.0.0.1:8000/api/posts`
+- Show particular post [GET]: `http://127.0.0.1:8000/api/posts/{id}`
+- Add new post [POST]: `http://127.0.0.1:8000/api/posts?title={TITLE}&content={CONTENT}`
+- Update particular post [PUT]: `http://127.0.0.1:8000/api/posts/2?title={UPDATED_TITLE}&content={UPDATED_CONTENT}`
+- Delete particular post [DELETE]: `http://127.0.0.1:8000/api/posts/{id}`
+
+### Subscription Endpoints
+- Subscribe new email [GET]: `http://127.0.0.1:8000/api/subscribe?email={EMAIL}`
+- Get subscriber lists [GET]: `http://127.0.0.1:8000/api/subscribers`
+- Unsubscribe [GET]: `http://127.0.0.1:8000/api/unsubscribe/{EMAIL}`
+
+## How to run
 1. Clone this repository. And navigate to the folder using `cd simple-subscription`
 2. Activate MYSQL on XAMPP and Create a new database using MySQL. For example:
     ```sql
