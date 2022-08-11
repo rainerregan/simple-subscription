@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -26,10 +27,15 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         // Create a new Post using POST request
+        $validated = $request->validated();
+        $post = Post::create($validated);
 
+        return response()->header('Content-Type', 'application/json')->json([
+            "message" => "Post Added. The id is ".$post->id
+        ], 201);
     }
 
     /**
@@ -40,7 +46,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return new PostResource($post);
     }
 
     /**
