@@ -20,9 +20,9 @@ class SendEmailNotificationOnPostPosted
     public function handle(PostPosted $event)
     {
         Subscriber::all()
-            ->map(function (Subscriber $subscriber){
+            ->map(function (Subscriber $subscriber) use($event){
                 SendEmailJob::dispatch(
-                    new PostPostedMail(),
+                    new PostPostedMail($event->post, $subscriber),
                     $subscriber
                 );
             });
