@@ -16,6 +16,9 @@ This Laravel app will allow user to create blog posts with `title` and `content`
     DB_USERNAME=root
     DB_PASSWORD=
     ```
+    
+    if the `.env` is not available, you can create the new `.env` file manually on the project root, and copy the `.env.example` into `.env` file you've created before. After that, you can continue modifying.
+    
 4. Modify the `APP_URL` on the `.env` file
     ```php
     APP_URL=http://127.0.0.1:8000/
