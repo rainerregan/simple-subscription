@@ -1,7 +1,7 @@
 # Simple Blog Post Subscription System
 This Laravel app will allow user to create blog posts with `title` and `content` using RESTful API, and subscribing to the mailing list, so people will get the newest info about the latest blog posts.
 
-Laravel version: 9
+Laravel version: Latest
 
 PHP version:
 ```
