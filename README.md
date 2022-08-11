@@ -41,16 +41,20 @@ This Laravel app will allow user to create blog posts with `title` and `content`
     MAIL_PASSWORD=8a1e76d1ec515d
     MAIL_ENCRYPTION=tls
     ```
-9. Run the queue:work command for using notification email queue.
+9. Run the artisan serve command
+    ```
+    php artisan serve
+    ```
+11. Run the queue:work command for using notification email queue.
     ```
     php artisan queue:work
     ```
-10. Run the database seeder to populate database with dummy data
+12. Run the database seeder to populate database with dummy data
     ```
     php artisan db:seed
     ```
     Type `yes` if you want to reset the database and fill with new fresh data.
-10. Open the postman collections to try the API
+13. Open the postman collections to try the API
     [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/d6ecad4c27effd09e4cc?action=collection%2Fimport)
     
 ## Using Postman
