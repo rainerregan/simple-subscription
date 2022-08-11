@@ -59,8 +59,8 @@ class PostController extends Controller
     public function update(PostRequest $request, Post $post)
     {
         $validated = $request->validated();
-        $post->title = $validated->title;
-        $post->content = $validated->content;
+        $post->title = $validated['title'];
+        $post->content = $validated['content'];
 
         $post->save();
         return new PostResource($post);
