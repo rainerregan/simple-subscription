@@ -27,12 +27,16 @@ This Laravel app will allow user to create blog posts with `title` and `content`
     ```
     QUEUE_CONNECTION=database
     ```
-6. Run the migration
+6. Run the composer install to install the dependencies
+    ```
+    composer install
+    ```
+7. Run the migration
     ```
     php artisan migrate
     ```
-7. Register mailtrap.io account on [mailtrap.io](https://mailtrap.io)
-8. Configure the SMPT settings on `.env` file using your mailtrap.io configuration.
+8. Register mailtrap.io account on [mailtrap.io](https://mailtrap.io)
+9. Configure the SMPT settings on `.env` file using your mailtrap.io configuration.
     ```php
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.mailtrap.io
@@ -41,7 +45,7 @@ This Laravel app will allow user to create blog posts with `title` and `content`
     MAIL_PASSWORD=8a1e76d1ec515d
     MAIL_ENCRYPTION=tls
     ```
-9. Run the artisan serve command
+10. Run the artisan serve command
     ```
     php artisan serve
     ```
