@@ -49,11 +49,11 @@ This Laravel app will allow user to create blog posts with `title` and `content`
     ```
     php artisan serve
     ```
-11. Run the queue:work command for using notification email queue.
+11. Run the queue:work command for using notification email queue on the different command prompt
     ```
     php artisan queue:work
     ```
-12. Run the database seeder to populate database with dummy data
+12. Run the database seeder to populate database with dummy data on the different command prompt.
     ```
     php artisan db:seed
     ```
