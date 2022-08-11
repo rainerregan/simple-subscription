@@ -1,6 +1,14 @@
 # Simple Blog Post Subscription System
 This Laravel app will allow user to create blog posts with `title` and `content` using RESTful API, and subscribing to the mailing list, so people will get the newest info about the latest blog posts.
 
+Laravel version: 9
+PHP version:
+```
+PHP 8.0.3 (cli) (built: Mar  2 2021 23:34:05) ( ZTS Visual C++ 2019 x64 )
+Copyright (c) The PHP Group
+Zend Engine v4.0.3, Copyright (c) Zend Technologies
+```
+
 ## How to implement
 1. Clone this repository. And navigate to the folder using `cd simple-subscription`
 2. Activate MYSQL on XAMPP and Create a new database using MySQL. For example:
