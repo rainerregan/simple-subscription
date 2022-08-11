@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+    // Relationship
+    public function subscribers()
+    {
+        return $this->hasMany(Subscriber::class);
+    }
 }
