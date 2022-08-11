@@ -56,10 +56,11 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, Post $post)
     {
-        $post->title = $request->title;
-        $post->content = $request->content;
+        $validated = $request->validated();
+        $post->title = $validated->title;
+        $post->content = $validated->content;
 
         $post->save();
         return new PostResource($post);
