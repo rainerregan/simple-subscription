@@ -25,7 +25,7 @@ class PostRequest extends FormRequest
     {
         return [
             'title' => 'required|string|min:10',
-            'content' => 'required|string|min:100|max:30000'
+            'content' => 'required|string|min:10|max:30000'
         ];
     }
 }
