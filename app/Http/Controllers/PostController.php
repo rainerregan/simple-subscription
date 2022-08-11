@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PostPosted;
 use App\Http\Requests\PostRequest;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
@@ -34,7 +35,9 @@ class PostController extends Controller
         $validated = $request->validated();
         $post = Post::create($validated);
 
-        return response()->header('Content-Type', 'application/json')->json([
+        event(new PostPosted($post));
+
+        return response()->json([
             "message" => "Post Added. The id is ".$post->id
         ], 201);
     }
