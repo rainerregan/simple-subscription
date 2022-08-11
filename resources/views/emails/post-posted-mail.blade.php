@@ -8,9 +8,7 @@ Hi, {{ $subscriber->email }}. Thanks for subscribing. There is a new blog post p
     {{$post->content}}
 @endcomponent
 
-{{-- @component('mail::button', ['url' => route('posts.show', [''])])
-See post
-@endcomponent --}}
+if you want to unsubscribe, [click here]({{ route('unsubscribe', ['email' => $subscriber->email]) }})
 
 Thanks,<br>
 {{ config('app.name') }}
